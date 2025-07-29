@@ -1,0 +1,37 @@
+body{
+    background-color: #111;
+    color: white;
+}
+.box{
+    background-color: transparent;
+    /* z-index: 1; */
+}
+.box1{
+    height: 500px;
+    width: 500px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+}
+
+#box2{
+    height: 500px;
+    width: 500px;
+    background-color: yellow;
+    margin: 5px;
+}
+#box3{
+    height: 500px;
+    width: 500px;
+    background-color: green;
+    margin: 5px;
+}
+#box4{
+    height: 500px;
+    width: 500px;
+    background-color: blue;
+    
+}
