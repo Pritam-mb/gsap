@@ -92,11 +92,23 @@
         }
 
         p {
-            font-size: 740px;
+            font-size: 680px;
 
             color: #ddd;
         }
-
+        .main{
+            height: 100vh;
+            width: 100%;
+            
+        }
+        #cursor {
+            height: 20px;
+            width: 20px;
+            border-radius: 360px;
+            position: fixed;
+            background-color: yellow;
+            pointer-events: none; /* Prevents cursor from blocking interactions */
+        }
 
         /* Scroll Down Indicator */
         .scroll-down {
@@ -105,30 +117,63 @@
             font-size: 16px;
             color: #ff6b6b;
         }
+
+        #page3 {
+            height: 250px;
+            width: 100%;
+            background: lightblue;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .svgg {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+        }
+
+        svg {
+            width: 70%;
+            height: 100%;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <div class="nav">
-        <h2>RenGoku</h2>
-        <div class="option">
-            <a class="links" href="#page1">Home</a>
-            <a class="links" href="#page2">About</a>
-            <a class="links" href="#">Log In</a>
+    <div class="main">
+        <div id="cursor"></div>
+        <div class="nav">
+            <h2>RenGoku</h2>
+            <div class="option">
+                <a class="links" href="#page1">Home</a>
+                <a class="links" href="#page2">About</a>
+                <a class="links" href="#">Log In</a>
+            </div>
+        </div>
+
+        <section id="page1">
+            <h1>I AM A DEVELOPER</h1>
+            <div class="scroll-down">↓ Scroll Down</div>
+        </section>
+
+        <div id="page2">
+            <p>
+                EXPERIENCESS
+            </p>
+        </div>
+        <div class="svgg">
+            <div id="page3">
+                <svg width="1000" height="200">
+                    <path d="M 60 100 Q 500 100 1200 100" stroke="black" fill="transparent" />
+                </svg>
+            </div>
+
         </div>
     </div>
-
-    <section id="page1">
-        <h1>I AM A DEVELOPER</h1>
-        <div class="scroll-down">↓ Scroll Down</div>
-    </section>
-
-    <div id="page2">
-        <p>
-            EXPERIENCESS
-        </p>
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
