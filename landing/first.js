@@ -98,3 +98,44 @@ page3.addEventListener("mouseleave", () => {
             ease: "back.out"
            })
         });
+
+        var tl2 = gsap.timeline()
+    // Animate car moving on scroll and reveal text
+tl2.to(".carimg", {
+  // transform : "translateX(+150%)",
+  x:1100,
+    delay:1,
+    duration: 3,// moves right
+  scrollTrigger: {
+    trigger: ".carimg",
+    scroller: "body",
+    markers: true,
+    start: "top 80%",
+    end: "top 30%",
+    scrub: 2,
+
+  }}).from(".cartext", {
+  opacity: 0,
+  y: 30,
+  delay: 4,
+  scrollTrigger: {  
+    trigger: ".cartext",
+    scroller: "body",
+    markers: true,
+    start: "top 80%",
+    end: "top 30%",
+    scrub: 2,
+  }})   
+
+  tl2.to(".car2", { 
+    scale: 3,
+    duration: 1,
+    scrollTrigger: {  
+      trigger: ".car2",
+      scroller: "body",
+      markers: true,
+      start: "top 80%",
+      end: "top 30%",
+      scrub: 2,
+      // pin: true,
+    } })

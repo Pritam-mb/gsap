@@ -96,18 +96,21 @@
 
             color: #ddd;
         }
-        .main{
+
+        .main {
             height: 100vh;
             width: 100%;
-            
+
         }
+
         #cursor {
             height: 20px;
             width: 20px;
             border-radius: 360px;
             position: fixed;
             background-color: yellow;
-            pointer-events: none; /* Prevents cursor from blocking interactions */
+            pointer-events: none;
+            /* Prevents cursor from blocking interactions */
         }
 
         /* Scroll Down Indicator */
@@ -130,7 +133,7 @@
         }
 
         .svgg {
-            height: 100vh;
+            height: 250px;
             width: 100%;
             display: flex;
         }
@@ -140,6 +143,39 @@
             height: 100%;
             text-align: center;
         }
+        .car{
+           display: flex;
+           height: 30vh;
+            width: 100%;
+            display: flex;
+            align-items: left;
+            padding: 100px;
+        }
+        .carimg{
+            display: inline-block;
+            position: absolute;
+        }
+        .cartext {
+  font-size: 24px;
+  color: rgb(240, 236, 236);
+  opacity: 1;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.car2{
+    height: 300px;
+    width: 500px;
+
+   }
+   .cars2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    height: 100vh   ;
+    width: 100%;
+   }
+
     </style>
 </head>
 
@@ -171,8 +207,20 @@
                     <path d="M 60 100 Q 500 100 1200 100" stroke="black" fill="transparent" />
                 </svg>
             </div>
-
         </div>
+        <div class="car">
+            <img class="carimg" src="audi.png" alt="Audi Car" width="500" height="300">
+                <div class="cartext">This is a dynamic AI-powered car!<br>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, quidem.<br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, alias?<br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br></div>
+                   
+        </div>
+    
+    <div class="cars2">
+ <img class="car2" src="blk.jpg" alt="" srcset="">
+    </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
