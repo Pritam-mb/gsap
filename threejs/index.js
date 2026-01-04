@@ -96,10 +96,10 @@ const ratio = width / height;
 
 const camera = new THREE.PerspectiveCamera(75, ratio, 0.1, 1000);
                                                //    near  far
-camera.position.z = 9;
-camera.position.x = 0;
-camera.position.y = 1;
-camera.lookAt(box2.position);
+camera.position.z = 4;
+// camera.position.x = 0;
+// camera.position.y = 1;
+// camera.lookAt(box2.position);
 scene.add(camera);
 
 // console.log(box.position.distanceTo(camera.position));
@@ -110,6 +110,11 @@ scene.add(camera);
 // Create canvas element for Three.js
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
+//controls
+// const control = new THREE.OrbitControls( camera, canvas );
+// control.enableDamping = true;
+// control.target.y = 2;
+
 
 //director
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
@@ -129,11 +134,16 @@ function animate() {
     box2.rotation.y =  elapsedTime;
     box3.rotation.y = 0.1 * elapsedTime;
     box1.rotation.y = 1.5 * elapsedTime;
-    // group.rotation.y = 0.4 * elapsedTime;
-    camera.position.x =Math.sin( cursor.x * 5)*10;
+    group.rotation.y = 0.4 * elapsedTime;
+
+   camera.position.x = cursor.x * 20;
     camera.position.z = Math.cos(cursor.y * 3)*3;
-    camera.position.y = cursor.y * 5;
+    camera.position.y = cursor.y * 6;
     camera.lookAt(box2.position);
+
+   // control.target.copy(box2.position);
+   // control.update();
+
     
     // camera.position.x = Math.sin( elapsedTime )*1.5 ;
     // camera.position.y = Math.cos( elapsedTime ) ;
@@ -141,7 +151,7 @@ function animate() {
     // camera.lookAt(box2.position);
     // box1.rotation.x += -0.01 * deltaTime * 0.1;
     // box3.rotation.x += 0.01* deltaTime * 0.1;
-    // group.rotation.y += 0.01 * deltaTime * 0.1;
+   //  group.rotation.y += 0.01 * deltaTime * 0.1;
     renderer.render(scene, camera); //capture every frame
 }
 animate();
